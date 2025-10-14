@@ -1,1 +1,1 @@
-# Wipro_MiniProjects# Wipro_Assignments
+# Wipro_MiniProjects
