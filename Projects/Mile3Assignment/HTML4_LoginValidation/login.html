@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <script>
+    function validatePassword() {
+      var pwd = document.getElementById("password").value;
+      var regex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+
+      if (pwd === "") {
+        alert("Password should not be empty");
+        return false;
+      } else if (!regex.test(pwd)) {
+        alert("Password must be at least 6 characters, contain one uppercase letter and one number");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validatePassword()">
+    Username: <input type="text" required><br><br>
+    Password: <input type="password" id="password" required><br><br>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>

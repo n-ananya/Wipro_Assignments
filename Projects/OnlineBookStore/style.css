@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .promo-banner {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .promo-banner .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  
+  .promo-banner h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  
+  .promo-banner span {
+    font-size: 18px;
+    text-transform: lowercase;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #e0e0e0;
+  }
+  
+  .action-buttons button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+  }
+  
+  .action-buttons img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .book-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .book-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .book-card p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

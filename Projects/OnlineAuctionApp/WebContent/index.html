@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Auction</title>
+  <script>
+    function validateForm() {
+      const fields = ["itemName", "description", "startingBid", "endDate", "sellerName"];
+      for (let id of fields) {
+        if (document.getElementById(id).value.trim() === "") {
+          alert(id + " must not be empty");
+          return false;
+        }
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Online Auction Form</h2>
+  <form action="AuctionServlet" method="post" onsubmit="return validateForm()">
+    Item Name: <input type="text" name="itemName" id="itemName"><br><br>
+    Description: <textarea name="description" id="description"></textarea><br><br>
+    Starting Bid: <input type="number" name="startingBid" id="startingBid"><br><br>
+    Bid End Date: <input type="date" name="endDate" id="endDate"><br><br>
+    Seller Name: <input type="text" name="sellerName" id="sellerName"><br><br>
+    <input type="submit" value="Submit Auction">
+  </form>
+</body>
+</html>

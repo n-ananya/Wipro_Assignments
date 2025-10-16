@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <script>
+    function validateForm() {
+      var userID = document.getElementById("userid").value;
+      var password = document.getElementById("password").value;
+      var dob = new Date(document.getElementById("dob").value);
+      var contact = document.getElementById("contact").value;
+      var today = new Date();
+
+      var pwdRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+
+      if (userID.length < 4 || userID.length > 8) {
+        alert("UserID must be between 4 and 8 characters");
+        return false;
+      }
+      if (!pwdRegex.test(password)) {
+        alert("Password must be at least 6 characters, contain one uppercase letter and one number");
+        return false;
+      }
+      if (dob >= today) {
+        alert("DOB must be less than today's date");
+        return false;
+      }
+      if (!/^\d{10}$/.test(contact)) {
+        alert("Contact number must be exactly 10 digits");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    UserID: <input type="text" id="userid" required><br><br>
+    Password: <input type="password" id="password" required><br><br>
+    DOB: <input type="date" id="dob" required><br><br>
+    Gender: <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female<br><br>
+    State: <select required>
+      <option value="">Select</option>
+      <option value="MP">MP</option>
+      <option value="UP">UP</option>
+    </select><br><br>
+    Contact Number: <input type="number" id="contact" required><br><br>
+    Address: <textarea required></textarea><br><br>
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="datetime"></div>
+
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <h2>Registration Form</h2>
+
+    <label>First Name:</label>
+    <input type="text" id="firstName"><br>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName"><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br>
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword"><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female<br>
+
+    <label>Mobile Number:</label>
+    <input type="text" id="mobile"><br>
+
+    <label>DOB:</label>
+    <input type="text" id="dob" placeholder="DD-MM-YYYY"><br>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br>
+
+    <label>Address:</label><br>
+    <textarea id="address"></textarea><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
